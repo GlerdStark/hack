@@ -1,12 +1,12 @@
-#include <stdio.h>
-#define BOOK "War and Peace"
+#include<stdio.h>
+#define PRAISE "You are an extraordinary being"
 int main(void)
 {
-    float cost = 12.99;
-    float percent = 80.0;
+    char name[40];
 
-    printf("This copy of %s sells for $%f.\n",BOOK,cost);
-    printf("That is %2f%% of list.\n",percent);
+    printf("What's your name?");
+    scanf("%s",name);
+    printf("Hello,%s.%s\n",name,PRAISE);
 
     return 0;
 
