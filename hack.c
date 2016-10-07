@@ -1,15 +1,20 @@
 #include<stdio.h>
-#define PI 3.14159
+#define ADJUST 7.31
 int main(void)
 {
-    float area,circum,radius;
+    const double SCALE = 0.333;
+    double shoe,foot;
 
-    printf("What is the radius of your pizza?\n");
-    scanf("%f",&radius);
-    area = PI * radius * radius;
-    circum = 2.0 * PI * radius;
-    printf("Your basic pizza parameters are as follows:\n");
-    printf("circumference = %1.2f,area = %1.2f\n",circum,area);
+    printf("Shoe size (men's) foot length\n");
+    shoe = 3.0;
+    while (shoe < 18.5)
+    {
+        foot = SCALE * shoe * ADJUST;
+        printf("%10.1f %15.2f inches\n",shoe,foot);
+        shoe = shoe + 1.0;
+
+    }
+    printf("If the shot fits ,wear it.\n");
 
     return 0;
 
