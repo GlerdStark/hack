@@ -1,20 +1,28 @@
 #include<stdio.h>
-#define ADJUST 7.31
+#define SQUARES 64
 int main(void)
 {
-    const double SCALE = 0.333;
-    double shoe,foot;
+    const double CROP = 2E16;
+    double current,total;
+    int count = 1;
 
-    printf("Shoe size (men's) foot length\n");
-    shoe = 3.0;
-    while (shoe < 18.5)
+    printf("square     grains      total      ");
+    printf("fraction of \n");
+    printf("         added        grains    ");
+    printf("world total\n");
+    total = current = 1.0;
+    printf("%4d %13.2e %12.2e %12.2e\n",count,current,
+           total,total / CROP);
+    while (count < SQUARES)
     {
-        foot = SCALE * shoe * ADJUST;
-        printf("%10.1f %15.2f inches\n",shoe,foot);
-        shoe = shoe + 1.0;
+        count = count + 1;
+        current = 2.0 * current;
+        total = total + current;
+        printf("%4d %13.2e %12.2e %12.2e\n",count,current,
+               total,total / CROP);
 
     }
-    printf("If the shot fits ,wear it.\n");
+    printf("That's all.\n");
 
     return 0;
 
