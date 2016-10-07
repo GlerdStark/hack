@@ -1,17 +1,15 @@
 #include<stdio.h>
-#include<string.h>
-#define PRAISE "You are an extraordinary being"
+#define PI 3.14159
 int main(void)
 {
-    char name[40];
+    float area,circum,radius;
 
-    printf("What's your name?");
-    scanf("%s",name);
-    printf("Hell,%s.%s\n",name,PRAISE);
-    printf("Your name of %Lu letters occupies %u memory cells.\n",
-           strlen(name),sizeof(PRAISE));
-    printf("The phrase of phrase has %Lu letters",strlen(PRAISE));
-    printf("and occupies %Lu memory cells.\n",sizeof(PRAISE));
+    printf("What is the radius of your pizza?\n");
+    scanf("%f",&radius);
+    area = PI * radius * radius;
+    circum = 2.0 * PI * radius;
+    printf("Your basic pizza parameters are as follows:\n");
+    printf("circumference = %1.2f,area = %1.2f\n",circum,area);
 
     return 0;
 
