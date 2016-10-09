@@ -1,21 +1,16 @@
-#include<stdio.h>
+#include <stdio.h>
 int main(void)
 {
-    long num;
-    long sum = 0L;
-    int status;
+    int n = 5;
 
-    printf("Please enter an integer to be summed ");
-    printf("(q to quit):");
-    status = scanf("%ld",&num);
-    while (status ==1)
+    while (n < 7)
     {
-        sum = sum + num;
-        printf("Please ener next integer (q to quit):");
-        status = scanf("%ld",&num);
+        printf("n = %d\n",n);
+        n++;
+        printf("Now n = %d\n",n);
 
     }
-    printf("Those integers sum to %ld.\n",sum);
+    printf("The loop has finished.\n");
 
     return 0;
 
