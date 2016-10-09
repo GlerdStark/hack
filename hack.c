@@ -1,22 +1,11 @@
 #include <stdio.h>
 int main(void)
 {
-    long num;
-    long sum = 0L;
-    _Bool input_is_good;
+    const int NUMBER = 22;
+    int count;
 
-    printf("Plesase enter an integer to be summed ");
-    printf("(q to quit): ");
-    input_is_good = (scanf("%ld",&num) == 1);
-    while  (input_is_good)
-    {
-        sum =sum + num;
-        printf("Please enter next integer (q to quit):");
-        input_is_good = (scanf("%ld",&num) == 1);
-
-    }
-    printf("Those integers sum to %ld.\n",sum);
+    for (count = 1;count <= NUMBER;count++)
+        printf("Be my Valentine!\n");
 
     return 0;
-
 }
