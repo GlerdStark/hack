@@ -1,16 +1,11 @@
 #include <stdio.h>
 int main(void)
 {
-    int n = 5;
+    int true_val ,false_val;
 
-    while (n < 7)
-    {
-        printf("n = %d\n",n);
-        n++;
-        printf("Now n = %d\n",n);
-
-    }
-    printf("The loop has finished.\n");
+    true_val = (10 > 2);
+    false_val = (10 == 2);
+    printf("true = %d;false =%d\n",true_val,false_val);
 
     return 0;
 
