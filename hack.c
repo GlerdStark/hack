@@ -1,22 +1,24 @@
 #include <stdio.h>
+#define SIZE 10
+#define PAR 72
 int main(void)
 {
-    const int secret_code = 13;
-    int code_entered;
+    int index, score[SIZE];
+    int sum = 0;
+    float average;
 
-    printf("To enter the triskaidekaphobia therapy club,\n");
-    printf("please enter the secret code number: ");
-    scanf("%d", &code_entered);
-    while (code_entered != secret_code)
-    {
-        printf("To enter the trikaidekaphobia therapy club,\n");
-        pritnf("please enter the secret code number: ");
-        scanf("%d", &code_entered);
-
-    }
-    printf("Congratulations! You are cured!\n");
+    printf("Enter %d golf scores:\n",SIZE);
+    for (index = 0; index < SIZE; index++)
+        scanf("%d",&score[index]);
+    printf("The scores read in are as follows:\n");
+    for (index = 0; index < SIZE; index++)
+        printf("%5d",score[index]);
+    printf("\n");
+    for (index = 0; index < SIZE; index++)
+        sum += score[index];
+    average = (float) sum / SIZE;
+    printf("Sum of scores = %d, average = %.2f\n", sum, average);
+    printf("That's a handicap of %.0f",average - PAR);
 
     return 0;
-
 }
-
