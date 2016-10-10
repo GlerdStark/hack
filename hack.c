@@ -4,15 +4,19 @@ int main(void)
     const int secret_code = 13;
     int code_entered;
 
-    do
+    printf("To enter the triskaidekaphobia therapy club,\n");
+    printf("please enter the secret code number: ");
+    scanf("%d", &code_entered);
+    while (code_entered != secret_code)
     {
-        printf("To enter the triskaidekaphobia therapy club,\n");
-        printf("Please enter the secret code number:");
-        scanf("%d",&code_entered);
+        printf("To enter the trikaidekaphobia therapy club,\n");
+        pritnf("please enter the secret code number: ");
+        scanf("%d", &code_entered);
 
-    }while (code_entered != secret_code);
-    printf("Congratulations! Your are cured!\n");
+    }
+    printf("Congratulations! You are cured!\n");
 
     return 0;
 
 }
+
