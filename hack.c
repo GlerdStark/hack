@@ -1,16 +1,11 @@
 #include <stdio.h>
-#define SIZE 8
 int main(void)
 {
-    int by_twos[SIZE];
-    int index;
+    int k;
 
-    for (index = 1; index <= SIZE; index++)
-    {
-        by_twos[index - 1] = 2 * index;
-        printf("%d\n", by_twos[index - 1]);
-
-    }
+    for (k = 1,printf("%d: Hi!\n",k);printf("k = %d\n",k),
+        k*k < 26; k += 2, printf("Now k is %d\n",k))
+            printf("k is %d in the loop\n",k);
 
     return 0;
 
